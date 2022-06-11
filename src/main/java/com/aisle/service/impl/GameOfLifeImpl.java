@@ -39,9 +39,10 @@ public class GameOfLifeImpl implements GameOfLife {
             maxColumnSize = Math.max(cellCoordinate.get(1),maxColumnSize);
 
         }
-        int maxSize = Math.max(maxColumnSize,maxColumnSize)+1;
+        int maxSize = Math.max(maxRowSize,maxColumnSize)+1;
         int[][] cellBoard = new int[maxSize][maxSize];
         for(List<Integer> cellCoordinate : livingCellCoOrdinates){
+
             cellBoard[cellCoordinate.get(0)] [cellCoordinate.get(1)] = 1;
         }
         return cellBoard;
